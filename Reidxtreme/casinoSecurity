@@ -1,0 +1,45 @@
+import collections
+a=int(input())
+loku=[]
+#length=[]
+for i in range (0,a):
+    p=input()
+    loku.append(p)
+    #length.append(i)
+
+for i in range (0,a):
+    frequencies = collections.Counter(loku[i])
+if frequencies['G']<frequencies['T']:
+    print("ALARM")
+    
+for i in range (0,a):
+    c=len(loku[i])
+    pos=loku[i].index('$',0,c-1)
+    
+    sub1=loku[i][pos:c-1]
+    sub2=loku[i][pos:0]
+    
+    if isinstance('G',sub1):
+        posG1=loku[i].index('G',pos,c-1)
+        subb1=loku[pos:posG1]
+        if (isinstance('T',subb1):
+            print("ALARM")
+    elif isinstance('T',sub1):
+        print("ALARM")
+        
+     if isinstance('G',sub2):
+        posG2=loku[i].index('G',pos,0)
+        subb2=loku[pos:posG2]
+        if (isinstance('T',subb2):
+            print("ALARM")
+    elif isinstance('T',sub2):
+        print("ALARM")
+        
+    #if isinstance('G',loku[i][0],loku[i][c-1])
+    #posT2=loku[i].index('T',pos,0)
+
+    
+    #q2=loku[i][pos:posT1]
+    
+    #if not(isinstance('G',q1)):
+     #   print("ALARM")

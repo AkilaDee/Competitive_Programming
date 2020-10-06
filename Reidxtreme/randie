@@ -1,0 +1,11 @@
+def maxlen(l,b):
+    if(b==0): 
+        return l 
+    else: 
+        return maxlen(b,l%b) 
+
+
+t=int(input())
+for i in range(0,t):
+    l,b=map(int,input().split())
+    print(maxlen(l,b))

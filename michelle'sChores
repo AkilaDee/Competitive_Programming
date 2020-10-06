@@ -1,0 +1,25 @@
+k,l=map(int,input().split())
+arr=[]
+
+for i in range (0,l):
+    p=list(input().split())
+    arr.append(p)
+    
+k=list(map(int,input().split()))
+
+#print(arr+"/n"+k)
+flag=0
+while i in arr:                           #job priorities ekin eka gannawa
+    for j in range (0,l):               #ammage list eka balanawa
+        if i[0]!=k[j] or i[1]!=k[j+1]:
+            flag=0
+            break;
+        else:
+            flag==1
+            i+=1
+        break
+           
+if flag==0:
+    print("NO")
+else:
+    print("YES")

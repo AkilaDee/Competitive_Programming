@@ -1,0 +1,23 @@
+n=int(input())
+arr1=[]
+arr2=[]
+for i in range (0,n):
+    s=input()
+    arr1.append(s)
+
+m=int(input())
+
+for i in range (0,m):
+    p=input()
+    arr2.append(p)
+    
+for j in arr2:
+    flag=0
+    for i in arr1:
+        if i in j:
+            flag=1
+            
+    if flag==1:
+        print("YES")
+    elif flag==0:
+        print("NO")

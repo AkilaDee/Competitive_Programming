@@ -1,0 +1,14 @@
+n,m=map(int,input().split())
+arr = list(map(int, input().split()))
+arr1=arr[m:]
+arr2=arr[0:m]
+arr3=arr1+arr2
+if m<0:
+    for i in range (o,n):
+        print(arr[i],end=' ')
+if m==n:
+    for i in range (n,0):
+        print(arr[i],end=' ')
+else:
+    for i in range (0,n):
+        print(arr3[i],end=' ')
